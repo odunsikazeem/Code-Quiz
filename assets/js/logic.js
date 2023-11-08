@@ -60,7 +60,8 @@ function startQuiz() {
    setTimer();
 }
 // Function to handle the submission of the user's score and initials 
-function saveInitials(counter) {
+function saveInitials(event) {
+   event.preventDefault();
    localStorage.setItem("initials", initialsEl.value);
    localStorage.setItem("score", score);
    location.href = "/highscores.html"
