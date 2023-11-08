@@ -60,14 +60,13 @@ function startQuiz() {
    setTimer();
 }
 // Function to handle the submission of the user's score and initials 
-function saveInitials(event) {
-   event.preventDefault();
+function saveInitials() {
    localStorage.setItem("initials", initialsEl.value);
    localStorage.setItem("score", score);
    location.href = "/highscores.html"
 }
 // Function to handle setTimer and clear interval
-function setTimer(){
+function setTimer() {
    timeEl.textContent = timer;
    
    interval = setInterval(() => {
@@ -82,7 +81,7 @@ function setTimer(){
    }, 1000); 
 }
 // Function to end Quiz
-function endQuiz (){
+function endQuiz () {
    endscreenEl.classList.remove("hide");
    finalscoreEl.textContent = "" + score;
    questionEl.style.display = "none";  
